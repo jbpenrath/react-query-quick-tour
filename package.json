@@ -1,0 +1,18 @@
+{
+  "name": "talk_react-query",
+  "workspaces": ["front", "back"],
+  "version": "1.0.0",
+  "description": "A project to show the main features of React Query",
+  "scripts": {
+    "dev": "concurrently \"yarn:dev-front\" \"yarn:dev-back\"",
+    "dev-front": "yarn workspace front run dev",
+    "dev-back": "yarn workspace back run dev"
+  },
+  "main": "index.js",
+  "author": "Jean-Baptiste PENRATH",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "7.0.0"
+  }
+}
