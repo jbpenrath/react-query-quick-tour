@@ -98,6 +98,13 @@ button {
   animation: slide-in 2s alternate forwards;
   animation-iteration-count: 2;
   min-width: 256px;
+  z-index: 999;
+}
+
+.toast.toast--error {
+  background-color: #e53935;
+  color: #FFF;
+  -webkit-text-fill-color: #FFF;
 }
 
 .toast > * {
@@ -115,7 +122,49 @@ button {
   }
 }
 
-.toast--error {
-  background-color: #e53935;
-  color: #FFF;
+.course .course-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  border-radius: 32px;
+  background-size: cover;
+  background-position: center center;
+  min-height: 50vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.course .course-header:before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #0000, #0005);
+}
+
+.course .course-header > * {
+  z-index: 1;
+}
+
+.course .course-header .course-header__actionBar {
+  display: flex;
+  gap: 32px;
+  align-self: flex-end;
+}
+
+.course .course-header .course-header__metadata {
+  align-self: flex-start;
+}
+
+.course .course-header .course-header__title {
+  color: #FFFC;
+}
+
+.course .course-header .course-header__date {
+  color: #FFF9;
 }
